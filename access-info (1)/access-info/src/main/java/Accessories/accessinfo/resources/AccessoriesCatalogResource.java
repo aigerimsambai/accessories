@@ -59,6 +59,7 @@ public class AccessoriesCatalogResource {
     private UserRating getUserRating(@PathVariable("userId") String userId) {
         return restTemplate.getForObject("http://localhost:8083/ratingsdata/users/" + userId, UserRating.class);
     }
+
     private UserRating getFallbackUserRating(@PathVariable("userId") String userId) {
         UserRating userRating = new UserRating();
         userRating.setUserId(userId);

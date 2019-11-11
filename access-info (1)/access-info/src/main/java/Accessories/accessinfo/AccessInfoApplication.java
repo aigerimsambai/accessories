@@ -15,6 +15,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @EnableCircuitBreaker
 @EnableHystrixDashboard
 public class AccessInfoApplication {
+
 	@Bean
 	RestTemplate getRestTemplate(){
 		return new RestTemplate();
